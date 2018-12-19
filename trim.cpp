@@ -22,6 +22,29 @@ void trim(char* str, char* trimmed)
   }
   else
   {
+
     strcpy(trimmed,str);
+
+    int counter = 0 ;
+    int length = strlen(str)-1;
+    while (str[counter] == ' ')
+    {
+      counter++;
+    }
+    for (int i = 0; i < length ; i++)
+    {
+      trimmed[i] = str[counter];
+       counter++;
+    }
+
+    length = strlen(trimmed);
+    for (int i = 0; i < length; i++)
+    {
+      if ( trimmed[i] == ' ' && trimmed[i+1] == ' ')
+      {
+        trimmed[i] = '\0';
+      }
+    }
+
   }
 }
