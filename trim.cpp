@@ -20,4 +20,8 @@ void trim(char* str, char* trimmed)
   {
     strcpy(trimmed,"");
   }
+  else
+  {
+    strcpy(trimmed,str);
+  }
 }
